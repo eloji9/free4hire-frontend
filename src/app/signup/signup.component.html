@@ -1,0 +1,42 @@
+<h2>Sign Up</h2>
+
+<form [formGroup]="rForm" (ngSubmit)="signupSubmit(rForm.value)">
+
+  <input [(ngModel)]="signupForm.firstName" formControlName="firstName" name="firstName" id="firstName" type="text" placeholder="First Name">
+  <div *ngIf="rForm.controls['firstName'].touched && !rForm.controls[ 'firstName'].valid">What's your First Name ?</div>
+
+  <input [(ngModel)]="signupForm.lastName" formControlName="lastName" name="lastName" id="lastName" type="text" placeholder="Last Name">
+  <div *ngIf="rForm.controls['lastName'].touched && !rForm.controls[ 'lastName'].valid">What's your Lirst Name ?</div>
+
+
+  <input [(ngModel)]="signupForm.email" formControlName="email" name="email" id="email" type="email" placeholder="email@example.com">
+  <div *ngIf="rForm.controls['email'].touched && !rForm.controls['email'].valid">Your emain will allow you to log in next time !</div>
+  <div *ngIf="rForm.controls['email'].dirty && rForm.controls['email'].hasError('email')">Your email is not valid</div>
+
+
+  <input [(ngModel)]="signupForm.originalPassword" formControlName="originalPassword" name="originalPassword" id="password"
+    type="password" placeholder="your secret password">
+  <div *ngIf="rForm.controls['originalPassword'].touched && rForm.controls[ 'originalPassword'].hasError('required')">Choose a password.</div>
+  <div *ngIf="rForm.controls['originalPassword'].touched && rForm.controls[ 'originalPassword'].hasError('pattern')">Your password need to be 10 characters long and have at least one number and one capital letter.</div>
+
+
+  <div class="switch-field">
+    <input [(ngModel)]="signupForm.role" formControlName="role" type="radio" id="switch_left" name="role" value="false"
+      checked/>
+
+    <label for="switch_left">
+      Worker
+    </label>
+
+    <input [(ngModel)]="signupForm.role" formControlName="role" type="radio" id="switch_right" name="role" value="true"
+    />
+
+    <label for="switch_right">
+      Client
+    </label>
+    <div *ngIf="!rForm.controls['role'].valid">Are you a futur Client or a futur Worker ?</div>
+
+  </div>
+
+  <input type="submit" value="Continuer" [disabled]="!rForm.valid">
+</form>

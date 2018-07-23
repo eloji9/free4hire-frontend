@@ -9,24 +9,24 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: LoginSubmission = new LoginSubmission();
+
   constructor(
     public myAuthServ: AuthService,
-    public myRouterServ: Router,
+    public myRouterServ: Router
   ) { }
 
   ngOnInit() {
   }
 
   loginSubmit() {
-    this.myAuthServ.postLogin(this.loginForm)
-    .then((response) => {
-      // redirect away to the home page
+    this.myAuthServ
+    .postLogin(this.loginForm)
+    .then(reponse => {
       this.myRouterServ.navigateByUrl('/');
     })
     .catch((err) => {
-      alert('Sorry! There was a problem with your login!');
+      alert('The connection did not work!');
       console.log(err);
     });
   }
-
 }

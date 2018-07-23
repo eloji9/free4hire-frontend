@@ -1,0 +1,76 @@
+
+<!-- <img src="../assets/images/logo.png" alt="logoFree4Hire"> -->
+
+<div class="dash">
+
+
+    <div class="user-info left">
+      <h1>Hi again, {{userInfo?.firstName}} {{userInfo?.lastName}}!</h1>
+
+      <span>
+        <h3>Profil</h3>
+        <a routerLink="/setting">Edit</a>
+      </span>
+
+      <ul>
+        <li>Adress: {{userInfo?.address}}</li>
+        <li>Phone: {{userInfo?.phone}}</li>
+        <li>Email: {{userInfo?.email}}</li>
+      </ul>
+
+      <div *ngIf="userInfo?.missions.length > 0" class="user-missions">
+        <span>
+          <h3><i>My missions</i></h3>
+        </span>
+        <ul>
+          <li *ngFor="let oneMission of userInfo?.missions">
+            <h3>
+              {{oneMission.type}}
+            </h3>
+            <p>
+              Adress: {{oneMission.adress}}
+            </p>
+            <p>
+              For: {{oneMission.client}}
+            </p>
+            <p>
+              Done by: {{oneMission.worker}}
+            </p>
+            <p>
+              From: {{oneMission.startDate}}
+            </p>
+            <p>
+              To: {{oneMission.endDate}}
+            </p>
+            <p>
+              Price: {{oneMission.price}}
+            </p>
+          </li>
+        </ul>
+      </div>
+
+
+      <div *ngIf="userInfo?.comments.length > 0" class="user-missions">
+        <span>
+          <h3><i>Comments</i></h3>
+        </span>
+        <ul>
+          <li *ngFor="let oneComment of userInfo?.comments">
+            <h3>
+              {{oneComment.title}}
+            </h3>
+            <p>
+              by : {{oneComment.creator}}
+            </p>
+            <p>
+              rating : {{oneComment.rating}}
+            </p>
+            <p>
+              {{oneComment.description}}
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
