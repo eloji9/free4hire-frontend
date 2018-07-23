@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from './auth.service';
+import { User, Availability, Adress } from './auth.service';
 
-const backendUrl = 'http://localhost:3000';
+import { environment } from '../../environments/environment';
+const { backendUrl } = environment;
 
 @Injectable({
   providedIn: 'root'
@@ -42,20 +43,6 @@ export class SettingSubmission {
   oldPassword: String = '';
   newPassword: String = '';
   image: String = '';
-  adress: Address;
+  adress: Adress;
   availabilities: Array<Availability>;
-}
-
-export class Address {
-  string: String;
-  lat: number;
-  long: number;
-}
-
-export class Availability {
-  type: String;
-  adress: Address;
-  worker: User;
-  startDate: Date;
-  endDate: Date;
 }

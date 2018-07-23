@@ -1,31 +1,31 @@
 <h2>My own profil</h2>
 
-<form [formGroup]="rForm" (ngSubmit)="settingsSubmit(rForm.value)">
-  <input [(ngModel)]="settingsForm.firstName" formControlName="firstName" name="firstName" id="firstName" type="text" placeholder="First Name"
+<form [formGroup]="rForm" (ngSubmit)="settingsSubmit()">
+  <input [(ngModel)]="settingForm.firstName" formControlName="firstName" name="firstName" id="firstName" type="text" placeholder="First Name"
     value="{{currentUser.firstName}}">
   <div *ngIf="rForm.controls[ 'firstName'].touched && !rForm.controls[ 'firstName'].valid">What's your First Name ?</div>
   <br>
 
-  <input [(ngModel)]="settingsForm.lastName" formControlName="lastName" name="lastName" id="lastName" type="text" placeholder="Last Name"
+  <input [(ngModel)]="settingForm.lastName" formControlName="lastName" name="lastName" id="lastName" type="text" placeholder="Last Name"
     value="{{currentUser.lastName}}">
   <div *ngIf="rForm.controls['lastName'].touched && !rForm.controls[ 'lastName'].valid">What's your Last Name ?</div>
   <br>
 
   <label for="exampleFormControlFile1">Update your picture</label>
-  <input [(ngModel)]="settingsForm.image" formControlName="pictureURL" name="image" id="image" type="file">
+  <input [(ngModel)]="settingForm.image" formControlName="pictureURL" name="image" id="image" type="file">
   <br>
 
-  <input [(ngModel)]="settingsForm.phone" formControlName="phone" name="phone" id="phone" type="text"
+  <input [(ngModel)]="settingForm.phone" formControlName="phone" name="phone" id="phone" type="text"
     placeholder="xx.xx.xx.xx.xx">
   <div *ngIf="rForm.controls[ 'phoneNumber'].touched && !rForm.controls[ 'phoneNumber'].valid">We need your phone to connect you to the other users.</div>
   <br>
 
-  <input [(ngModel)]="settingsForm.oldPassword" formControlName="oldPassword" name="oldPassword" id="oldPassword" type="password"
+  <input [(ngModel)]="settingForm.oldPassword" formControlName="oldPassword" name="oldPassword" id="oldPassword" type="password"
     placeholder="Current Password">
   <div *ngIf="rForm.controls[ 'oldPassword'].touched && !rForm.controls[ 'oldPassword'].valid">You need to submit your current password.</div>
   <br>
 
-  <input [(ngModel)]="settingsForm.newPassword" formControlName="newPassword" name="newPassword" id="newPassword" type="password"
+  <input [(ngModel)]="settingForm.newPassword" formControlName="newPassword" name="newPassword" id="newPassword" type="password"
     placeholder="New Password">
   <div *ngIf="rForm.controls[ 'newPassword'].touched && !rForm.controls[ 'newPassword'].valid">Chose a new password.</div>
   <br>
@@ -34,7 +34,7 @@
   <!-- <fieldset>
     <legend>My Availabilities</legend>
     <div>
-      <input [(ngModel)]="settingsForm.feature" formControlName="specificNeed" name="specificNeed" id="debout" type="checkbox">
+      <input [(ngModel)]="settingForm.feature" formControlName="specificNeed" name="specificNeed" id="debout" type="checkbox">
       <label for="debout">J'ai besoin d'aide pour me mettre debout</label>
     </div>
   </fieldset> -->

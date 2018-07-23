@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User, AuthService } from '../api/auth.service';
-import { SettingsService, SettingSubmission, Availability } from '../api/settings.service';
+import { User, AuthService, Adress, Availability } from '../api/auth.service';
+import { SettingsService, SettingSubmission } from '../api/settings.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Address } from 'cluster';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,7 +19,7 @@ export class SettingsComponent implements OnInit {
   oldPassword: string;
   newPassword: string;
   image: string;
-  adress: Address;
+  adress: Adress;
   availabilities: Array<Availability>;
 
   constructor(

@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { SimpleWebDriverClient } from 'blocking-proxy/built/lib/simple_webdriver_client';
 
-const backendUrl = 'http://localhost:3000';
+import { environment } from '../../environments/environment';
+const { backendUrl } = environment;
 
 @Injectable({
   providedIn: 'root'
@@ -97,7 +98,10 @@ export class User {
   createdAt: string;
   updatedAt: string;
   role: boolean;
-
+  adress: Adress;
+  phone: string;
+  missions: Array<Mission>;
+  comments: Array<Comment>;
 }
 
 export class LoginSubmission {
@@ -111,4 +115,35 @@ export class SignupSubmission {
   email: string;
   role: boolean;
   originalPassword: string;
+}
+
+export class Adress {
+  string: String;
+  lat: number;
+  long: number;
+}
+
+export class Mission {
+  type: string;
+  adress: Adress;
+  client: string;
+  worker: string;
+  startDate: Date;
+  endDate: Date;
+}
+
+export class Comment {
+  title: string;
+  description: string;
+  creator: string;
+  forWhom: string;
+  rating: number;
+}
+
+export class Availability {
+  type: string;
+  adress: Adress;
+  worker: string;
+  startDate: Date;
+  endDate: Date;
 }

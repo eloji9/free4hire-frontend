@@ -1,6 +1,6 @@
 <h2>Sign Up</h2>
 
-<form [formGroup]="rForm" (ngSubmit)="signupSubmit(rForm.value)">
+<form [formGroup]="rForm" (ngSubmit)="signupSubmit()">
 
   <input [(ngModel)]="signupForm.firstName" formControlName="firstName" name="firstName" id="firstName" type="text" placeholder="First Name">
   <div *ngIf="rForm.controls['firstName'].touched && !rForm.controls[ 'firstName'].valid">What's your First Name ?</div>
