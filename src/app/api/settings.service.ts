@@ -7,6 +7,7 @@ const backendUrl = 'http://localhost:3000';
 @Injectable({
   providedIn: 'root'
 })
+
 export class SettingsService {
   currentUser: User;
 

@@ -5,6 +5,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { UserPlatformComponent } from './user-platform/user-platform.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'login', component: LoginComponent},
   {path: 'platform', component: UserPlatformComponent},
+  {path: 'settings', component: SettingsComponent},
   {path: '**', component: NotFoundPageComponent},
 ];
 
