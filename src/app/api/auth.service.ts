@@ -98,7 +98,8 @@ export class User {
   createdAt: string;
   updatedAt: string;
   role: boolean;
-  adress: Adress;
+  // image: string;
+  adress: string;
   phone: string;
   missions: Array<Mission>;
   comments: Array<Comment>;
@@ -114,18 +115,21 @@ export class SignupSubmission {
   lastName: string;
   email: string;
   role: boolean;
+  // image: string;
+  adress: string;
+  phone: string;
   originalPassword: string;
 }
 
-export class Adress {
-  string: String;
-  lat: number;
-  long: number;
-}
+// export class Adress {
+//   string: String;
+//   lat: number;
+//   long: number;
+// }
 
 export class Mission {
   type: string;
-  adress: Adress;
+  adress: string;
   client: string;
   worker: string;
   startDate: Date;
@@ -138,12 +142,4 @@ export class Comment {
   creator: string;
   forWhom: string;
   rating: number;
-}
-
-export class Availability {
-  type: string;
-  adress: Adress;
-  worker: string;
-  startDate: Date;
-  endDate: Date;
 }

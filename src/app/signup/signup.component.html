@@ -10,9 +10,20 @@
 
 
   <input [(ngModel)]="signupForm.email" formControlName="email" name="email" id="email" type="email" placeholder="email@example.com">
-  <div *ngIf="rForm.controls['email'].touched && !rForm.controls['email'].valid">Your emain will allow you to log in next time !</div>
+  <div *ngIf="rForm.controls['email'].touched && !rForm.controls['email'].valid">Your email will allow you to log in next time !</div>
   <div *ngIf="rForm.controls['email'].dirty && rForm.controls['email'].hasError('email')">Your email is not valid</div>
 
+  <!-- <input [(ngModel)]="signupForm.image" formControlName="image" name="image" id="image" type="file">
+  <div *ngIf="rForm.controls['image'].touched && !rForm.controls['image'].valid">Allow the other users to see your beautiful face !</div>
+  <div *ngIf="rForm.controls['image'].dirty && rForm.controls['image'].hasError('image')">There is a problem with your picture</div> -->
+
+  <input [(ngModel)]="signupForm.phone" formControlName="phone" name="email" id="phone" type="phone" placeholder="xx.xx.xx.xx.xx">
+  <div *ngIf="rForm.controls['phone'].touched && !rForm.controls['phone'].valid">Your phone number is important to connect you to others !</div>
+  <div *ngIf="rForm.controls['phone'].dirty && rForm.controls['phone'].hasError('phone')">Your phone number is not valid.</div>
+
+  <input [(ngModel)]="signupForm.adress" formControlName="adress" name="adress" id="adress" type="adress" placeholder="500 parkstreet Washington DC USA">
+  <div *ngIf="rForm.controls['adress'].touched && !rForm.controls['adress'].valid">Your adress is important to connect you to others !</div>
+  <div *ngIf="rForm.controls['adress'].dirty && rForm.controls['adress'].hasError('adress')">Your adress is not valid.</div>
 
   <input [(ngModel)]="signupForm.originalPassword" formControlName="originalPassword" name="originalPassword" id="password"
     type="password" placeholder="your secret password">
@@ -21,15 +32,13 @@
 
 
   <div class="switch-field">
-    <input [(ngModel)]="signupForm.role" formControlName="role" type="radio" id="switch_left" name="role" value="false"
-      checked/>
+    <input [(ngModel)]="signupForm.role" formControlName="role" type="radio" id="switch_left" name="role" value="false"checked/>
 
     <label for="switch_left">
       Worker
     </label>
 
-    <input [(ngModel)]="signupForm.role" formControlName="role" type="radio" id="switch_right" name="role" value="true"
-    />
+    <input [(ngModel)]="signupForm.role" formControlName="role" type="radio" id="switch_right" name="role" value="true"/>
 
     <label for="switch_right">
       Client

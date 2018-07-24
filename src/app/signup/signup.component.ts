@@ -17,6 +17,9 @@ export class SignupComponent implements OnInit {
   email: string;
   originalPassword: string;
   role: boolean;
+  // image: string;
+  adress: string;
+  phone: string;
 
   constructor(
     public myAuthServ: AuthService,
@@ -36,7 +39,10 @@ export class SignupComponent implements OnInit {
           Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{10,}$')
         ])
       ],
-      role: [null, Validators.required]
+      role: [null, Validators.required],
+      // image: [null, Validators.required],
+      adress: [null, Validators.required],
+      phone: [null, Validators.required],
     });
    }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User, AuthService, Adress, Availability } from '../api/auth.service';
+import { User, AuthService, Mission } from '../api/auth.service';
 import { SettingsService, SettingSubmission } from '../api/settings.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -19,8 +19,8 @@ export class SettingsComponent implements OnInit {
   oldPassword: string;
   newPassword: string;
   image: string;
-  adress: Adress;
-  availabilities: Array<Availability>;
+  adress: string;
+  missions: Array<Mission>;
 
   constructor(
     public mySettingsServer: SettingsService,

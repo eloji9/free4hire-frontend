@@ -1,0 +1,31 @@
+h1{
+    margin: 10vh 0 0 0;
+    text-align: center;
+}
+
+.img-client{
+    height: 25vh;
+}
+
+.boxes-client{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-client{
+    border: 1px solid black;
+    width: 35vw;
+    margin: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.box-client p {
+    text-align: justify;
+    padding: 0 10vw;
+}
+
+.img-worker{
+
+}

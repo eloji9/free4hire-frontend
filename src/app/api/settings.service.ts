@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User, Availability, Adress } from './auth.service';
+import { User, Mission } from './auth.service';
 
 import { environment } from '../../environments/environment';
 const { backendUrl } = environment;
@@ -43,6 +43,6 @@ export class SettingSubmission {
   oldPassword: String = '';
   newPassword: String = '';
   image: String = '';
-  adress: Adress;
-  availabilities: Array<Availability>;
+  adress: string;
+  missions: Array<Mission>;
 }
