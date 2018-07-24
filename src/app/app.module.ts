@@ -11,8 +11,12 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { UserPlatformComponent } from './user-platform/user-platform.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 import { SettingsComponent } from './settings/settings.component';
+import { CreateMissionComponent } from './create-mission/create-mission.component';
+import { MissionDetailsComponent } from './mission-details/mission-details.component';
+import { SearchMissionComponent } from './search-mission/search-mission.component';
+import { SearchMissionResultComponent } from './search-mission-result/search-mission-result.component';
+import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
 
 
 @NgModule({
@@ -23,8 +27,12 @@ import { SettingsComponent } from './settings/settings.component';
     SignupComponent,
     LoginComponent,
     UserPlatformComponent,
-    UserProfileComponent,
     SettingsComponent,
+    CreateMissionComponent,
+    MissionDetailsComponent,
+    SearchMissionComponent,
+    SearchMissionResultComponent,
+    UserProfilePageComponent,
   ],
   imports: [
     BrowserModule,

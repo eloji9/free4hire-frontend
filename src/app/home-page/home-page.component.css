@@ -1,3 +1,17 @@
+.top-section{
+    height: 100vh;
+    background-image: url(src/assets/HomePage/background-images/animal-cat-cute-46024.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+.middle-section{
+    height: 100vh;
+    background-image: url(src/assets/HomePage/background-images/adult-cleaning-flora-713297.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
 h1{
     margin: 10vh 0 0 0;
     text-align: center;

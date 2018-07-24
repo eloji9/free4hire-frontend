@@ -2,12 +2,26 @@ header{
     height: 30px;
 }
 
-nav {
+.navbar-home{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(255, 255, 255);
-    /* border: 1px solid black; */
+    align-items: center;
+}
+
+button:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+nav {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255); */
+    border: 1px solid black;
     margin: 0;
 }
 

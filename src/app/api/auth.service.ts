@@ -129,18 +129,18 @@ export class SignupSubmission {
 // }
 
 export class Mission {
-  type: string;
-  adress: string;
-  client: string;
-  worker: string;
-  startDate: Date;
-  endDate: Date;
+  // type: string;
+  // adress: string;
+  // client: string;
+  // worker: string;
+  // startDate: Date;
+  // endDate: Date;
 }
 
 export class Comment {
-  title: string;
-  description: string;
-  creator: string;
-  forWhom: string;
-  rating: number;
+  // title: string;
+  // description: string;
+  // creator: string;
+  // forWhom: string;
+  // rating: number;
 }

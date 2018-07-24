@@ -1,8 +1,12 @@
 
 <!-- <img src="../assets/images/logo.png" alt="logoFree4Hire"> -->
+<a routerLink="/settings">Edit Your Infos</a>
+<a routerLink="/mission/create">Create a New Mission</a>
+<a routerLink="/search-mission">Search For a Mission</a>
 
-<div class="dash">
-    <div class="user-info left">
+
+<div class="allOfIt">
+    <div class="user-info">
       <h1>Hi again, {{userInfo?.firstName}} {{userInfo?.lastName}}!</h1>
 
       <span>
@@ -28,20 +32,20 @@
             <p>
               Adress: {{oneMission.adress}}
             </p>
-            <p>
+            <p *ngIf="oneMission.client">
               For: {{oneMission.client}}
             </p>
             <p>
               Done by: {{oneMission.worker}}
             </p>
             <p>
-              From: {{oneMission.startDate}}
+              From: {{oneMission.startDateTime}}
             </p>
             <p>
-              To: {{oneMission.endDate}}
+              To: {{oneMission.endDateTime}}
             </p>
             <p>
-              Price: {{oneMission.price}}
+              Price: {{oneMission.priceHour}}
             </p>
           </li>
         </ul>

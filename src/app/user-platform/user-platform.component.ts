@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User, AuthService } from '../api/auth.service';
+import { nextTick } from 'q';
 
 @Component({
   selector: 'app-user-platform',
@@ -26,4 +27,14 @@ export class UserPlatformComponent implements OnInit {
       console.log(err);
     });
   }
+
+  // getUserMission() {
+  //   this.myMissionServ.getMissions()
+  //   .then((results: any) => {
+  //     this.missionData = results;
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
+  // }
 }
