@@ -3,6 +3,22 @@ h1{
     text-align: center;
 }
 
+.text p{
+    text-align: center;
+}
+
+#about h2{
+    text-align: center;
+}
+
+#about p{
+    text-align: center;
+}
+
+.big-box{
+    text-align: center;
+}
+
 .img-client{
     height: 25vh;
 }
@@ -13,7 +29,7 @@ h1{
 }
 
 .box-client{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 35vw;
     margin: 0 5vw;
     display: flex;
@@ -26,6 +42,30 @@ h1{
     padding: 0 10vw;
 }
 
-.img-worker{
+#team{
+    text-align: center;
+}
 
+.img-team{
+    height: 40vh;
+}
+
+.team-presentation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li{
+    list-style-type: none;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact input{
+    width: 336px;
 }
