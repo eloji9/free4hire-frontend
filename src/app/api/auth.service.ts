@@ -76,6 +76,7 @@ export class AuthService {
     .then((response: any) => {
       // update "currentUser" if we log out successfully
       this.currentUser = response.userDoc;
+      this.myRouterServ.navigateByUrl('/');
       return response;
     });
   }

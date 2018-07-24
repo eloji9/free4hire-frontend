@@ -14,6 +14,7 @@ import { UserPlatformComponent } from './user-platform/user-platform.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { SettingsComponent } from './settings/settings.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

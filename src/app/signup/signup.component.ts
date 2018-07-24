@@ -53,7 +53,7 @@ export class SignupComponent implements OnInit {
     this.myAuthServ
       .postSignup(this.signupForm)
       .then(response => {
-        this.myRouterServ.navigateByUrl('/');
+        this.myRouterServ.navigateByUrl('/platform');
       })
       .catch(err => {
         alert('Sorry! The log in has not been possible!');

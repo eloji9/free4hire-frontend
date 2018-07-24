@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     this.myAuthServ
     .postLogin(this.loginForm)
     .then(reponse => {
-      this.myRouterServ.navigateByUrl('/');
+      this.myRouterServ.navigateByUrl('/platform');
     })
     .catch((err) => {
       alert('The connection did not work!');
