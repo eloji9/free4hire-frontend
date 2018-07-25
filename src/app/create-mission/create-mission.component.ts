@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MissionCreated, MissionsService } from '../api/missions.service';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from '../api/auth.service';
 
 @Component({
   selector: 'app-create-mission',
@@ -10,21 +11,34 @@ import { Router } from '@angular/router';
 })
 export class CreateMissionComponent implements OnInit {
   missionForm: MissionCreated = new MissionCreated();
-
+  mForm: FormGroup;
+  type: string;
+  adress: string;
+  worker: User;
+  startDate: Date;
+  startHour: string;
+  startMin: string;
+  endDate: Date;
+  endHour: string;
+  endMin: string;
+  price: number;
   searchControl: FormControl;
 
   constructor(
     private myMissionsServ: MissionsService,
     private myRouterServ: Router,
+    private fb: FormBuilder
   ) { }
 
   ngOnInit() {
 
     this.searchControl = new FormControl();
+    this.mForm = this.fb.group({});
 
   }
 
   missionSubmit() {
+    console.log('this.missionForm');
     this.myMissionsServ
     .postMission(this.missionForm)
     .then(() => {

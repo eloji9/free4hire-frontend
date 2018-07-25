@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 import { environment } from '../../environments/environment';
+import { User } from './auth.service';
+
 const { backendUrl } = environment;
 
 @Injectable({
@@ -15,19 +17,19 @@ export class MissionsService {
     private myRouterServ: Router,
   ) { }
 
-  getMissions() {
-    return this.myHttpServ
-    .get(
-      `${backendUrl}/api/missions`,
-      { withCredentials: true }
-    )
-    .toPromise();
-  }
+  // getMissions() {
+  //   return this.myHttpServ
+  //   .get(
+  //     `${backendUrl}/api/missions`,
+  //     { withCredentials: true }
+  //   )
+  //   .toPromise();
+  // }
 
   postMission(missionInfo: MissionCreated) {
     return this.myHttpServ
     .post(
-      `${backendUrl}/api/missions`,
+      `${backendUrl}/api/process-missions`,
       missionInfo,
       { withCredentials: true }
     )
@@ -38,8 +40,7 @@ export class MissionsService {
 export class MissionCreated {
   type: string;
   adress: string;
-  // client,
-  // worker,
+  worker: User;
   startDate: Date;
   startHour: string;
   startMin: string;
@@ -47,16 +48,14 @@ export class MissionCreated {
   endHour: string;
   endMin: string;
   price: number;
-  // comment,
 }
 
 export class Mission {
   type: string;
-  // worker: req.user._id,
-  // client:
+  worker: User;
+  client: User;
   startDateTime: Date;
   endDateTime: Date;
   priceHour: string;
   adress: string;
-  // comment,
 }

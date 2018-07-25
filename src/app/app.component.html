@@ -9,6 +9,9 @@
           <a routerLink="/">Home Page</a>
           <b>Welcome, {{myAuthServ.currentUser.firstName}} {{myAuthServ.currentUser.lastName}}</b>
           <a routerLink="/platform">Your platform</a>
+          <a routerLink="/settings">Edit Your Infos</a>
+          <a *ngIf="!myAuthServ.currentUser.role" routerLink="/process-missions">Create a New Mission</a>
+          <a *ngIf="myAuthServ.currentUser.role" routerLink="/search-mission">Search For a Mission</a>
           <button (click)='logoutClick()'>Log Out</button>
       </div>
       <div class="navbar-home" *ngIf="!myAuthServ.currentUser">

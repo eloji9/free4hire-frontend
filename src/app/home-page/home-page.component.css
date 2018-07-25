@@ -1,15 +1,68 @@
 .top-section{
     height: 100vh;
-    background-image: url(src/assets/HomePage/background-images/animal-cat-cute-46024.jpg);
+}
+
+.top-section::after {
+    content: "";
+    background:
+    linear-gradient(
+        rgba(120, 204, 184, 0.2),
+        rgba(120, 204, 184, 0.2)
+    ), url(src/assets/HomePage/background-images/animal-cat-cute-46024.jpg);
     background-repeat: none;
     background-size: cover;
-}
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 
 .middle-section{
     height: 100vh;
-    background-image: url(src/assets/HomePage/background-images/adult-cleaning-flora-713297.jpg);
+}
+
+.middle-section::after {
+    content: "";
+    background:
+    linear-gradient(
+        rgba(165, 221, 113, 0.5),
+        rgba(165, 221, 113, 0.5)
+    ), url(src/assets/HomePage/background-images/adult-cleaning-flora-713297.jpg);
     background-repeat: none;
     background-size: cover;
+    opacity: 0.4;
+    top: 100vh;
+    left: 0;
+    bottom: -100vh;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+.big-box .client-section{
+    height: 100vh;
+    border: 1px solid black
+}
+
+/* .client-section::after{
+    background:
+    linear-gradient(
+        rgba(#E4572E, 0.5),
+        rgba(#E4572E, 0.5)
+    );
+    top: 0vh;
+    left: 0;
+    bottom: -200vh;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  } */
+
+.big-box .worker-section{
+    height: 100vh;
 }
 
 h1{

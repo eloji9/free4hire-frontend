@@ -29,7 +29,7 @@ const routes: Routes = [
     canActivate: [VerifAuthenGuard],
   },
   {
-    path: 'mission/create',
+    path: 'process-missions',
     component: CreateMissionComponent,
     canActivate: [VerifAuthenGuard],
   },
