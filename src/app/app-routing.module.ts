@@ -12,6 +12,7 @@ import { MissionDetailsComponent } from './mission-details/mission-details.compo
 import { SearchMissionComponent } from './search-mission/search-mission.component';
 import { SearchMissionResultComponent } from './search-mission-result/search-mission-result.component';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
+import { ListMissionsComponent } from './list-missions/list-missions.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,7 @@ const routes: Routes = [
     canActivate: [VerifAuthenGuard],
   },
   {
-    path: 'profile/:userId',
+    path: 'user/:workerId',
     component: UserProfilePageComponent,
     canActivate: [VerifAuthenGuard],
   },
@@ -44,8 +45,18 @@ const routes: Routes = [
     canActivate: [VerifAuthenGuard],
   },
   {
+    path: 'user/:workerId',
+    component: UserPlatformComponent,
+    canActivate: [VerifAuthenGuard],
+  },
+  {
     path: 'result-search',
     component: SearchMissionResultComponent,
+    canActivate: [VerifAuthenGuard],
+  },
+  {
+    path: 'list-missions',
+    component: ListMissionsComponent,
     canActivate: [VerifAuthenGuard],
   },
   {

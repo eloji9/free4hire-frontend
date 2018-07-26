@@ -11,6 +11,7 @@
         <a routerLink="/settings">Edit Your Infos</a>
         <a *ngIf="!myAuthServ.currentUser.role" routerLink="/process-missions">Create a New Mission</a>
         <a *ngIf="myAuthServ.currentUser.role" routerLink="/search-mission">Search For a Mission</a>
+        <a *ngIf="myAuthServ.currentUser.role" routerLink="/list-missions">Access All The Missions</a>
         <button (click)='logoutClick()'>Log Out</button>
     </div>
     <div class="navbar-home " *ngIf="!myAuthServ.currentUser">

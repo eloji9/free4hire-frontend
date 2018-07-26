@@ -1,0 +1,29 @@
+<h2>
+  Our Missions
+</h2>
+<ul>
+  <li *ngFor="let oneMission of missions">
+    <h3>
+      {{oneMission.type}}
+    </h3>
+    <p>
+      Adress: {{oneMission.adress}}
+    </p>
+    <p *ngIf="oneMission.client">
+      For: {{oneMission.client}}
+    </p>
+    <p>
+      Done by: {{oneMission.worker.firstName}} {{oneMission.worker.lastName}}
+    </p>
+    <a [routerLink]="['/user', oneMission.worker._id]">See the profile</a>
+    <p>
+      From: {{oneMission.startDateTime}}
+    </p>
+    <p>
+      To: {{oneMission.endDateTime}}
+    </p>
+    <p>
+      Price: {{oneMission.priceHour}}
+    </p>
+  </li>
+</ul>

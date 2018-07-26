@@ -18,6 +18,7 @@ import { MissionDetailsComponent } from './mission-details/mission-details.compo
 import { SearchMissionComponent } from './search-mission/search-mission.component';
 import { SearchMissionResultComponent } from './search-mission-result/search-mission-result.component';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
+import { ListMissionsComponent } from './list-missions/list-missions.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { UserProfilePageComponent } from './user-profile-page/user-profile-page.
     SearchMissionComponent,
     SearchMissionResultComponent,
     UserProfilePageComponent,
+    ListMissionsComponent,
   ],
   imports: [
     BrowserModule,
