@@ -8,7 +8,7 @@
     linear-gradient(
         rgba(120, 204, 184, 0.2),
         rgba(120, 204, 184, 0.2)
-    ), url(src/assets/HomePage/background-images/animal-cat-cute-46024.jpg);
+    ), url(../../assets/HomePage/background-images/animal-cat-cute-46024.jpg);
     background-repeat: none;
     background-size: cover;
     opacity: 0.4;
@@ -30,7 +30,7 @@
     linear-gradient(
         rgba(165, 221, 113, 0.5),
         rgba(165, 221, 113, 0.5)
-    ), url(src/assets/HomePage/background-images/adult-cleaning-flora-713297.jpg);
+    ), url(../../assets/HomePage/background-images/adult-cleaning-flora-713297.jpg);
     background-repeat: none;
     background-size: cover;
     opacity: 0.4;

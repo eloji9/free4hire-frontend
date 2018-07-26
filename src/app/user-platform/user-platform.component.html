@@ -6,46 +6,65 @@
     <div class="user-info">
       <h1>Hi again, {{userInfo?.firstName}} {{userInfo?.lastName}}!</h1>
 
-      <span>
+      <!-- <span>
         <h3>Profil</h3>
         <a routerLink="/settings">Edit</a>
-      </span>
+      </span> -->
+      <div class="user-infos">
+        <ul>
+          <li>Adress: {{userInfo?.adress}}</li>
+          <li>Phone: {{userInfo?.phone}}</li>
+          <li>Email: {{userInfo?.email}}</li>
+        </ul>
+      </div>
 
-      <ul>
-        <li>Adress: {{userInfo?.adress}}</li>
-        <li>Phone: {{userInfo?.phone}}</li>
-        <li>Email: {{userInfo?.email}}</li>
-      </ul>
 
-      <div *ngIf="userInfo?.missions.length > 0" class="user-missions">
+      <div class="missions-box">
         <span>
           <h3><i>My missions</i></h3>
         </span>
-        <ul>
-          <li *ngFor="let oneMission of userInfo?.missions">
-            <h3>
-              {{oneMission.type}}
-            </h3>
-            <p>
-              Adress: {{oneMission.adress}}
+        <!-- <div*ngIf="userInfo?.missions.length = 0" class="user-no-missions">
+          <p>
+            You have no missions yet.
+          </p>
+          <p *ngIf="!myAuthServ.currentUser.role">
+            Create a new one and make yourself available.
+          </p>
+          <p *ngIf="myAuthServ.currentUser.role">
+              Check all the available missions and search for your need.
             </p>
-            <p *ngIf="oneMission.client">
-              For: {{oneMission.client}}
-            </p>
-            <p>
-              Done by: {{oneMission.worker}}
-            </p>
-            <p>
-              From: {{oneMission.startDateTime}}
-            </p>
-            <p>
-              To: {{oneMission.endDateTime}}
-            </p>
-            <p>
-              Price: {{oneMission.priceHour}}
-            </p>
-          </li>
-        </ul>
+        </div> -->
+
+        <div *ngIf="userInfo?.missions.length > 0" class="user-missions">
+          <ul>
+            <div>
+                <li *ngFor="let oneMission of missionData">
+                  <h3>
+                    {{oneMission.type}}
+                  </h3>
+                  <p>
+                    Adress: {{oneMission.adress}}
+                  </p>
+                  <p *ngIf="oneMission.client">
+                    For: {{oneMission.client}}
+                  </p>
+                  <p>
+                    Done by: {{oneMission.worker.firstName}} {{oneMission.worker.lastName}}
+                  </p>
+                  <p>
+                    From: {{oneMission.startDateTime}}
+                  </p>
+                  <p>
+                    To: {{oneMission.endDateTime}}
+                  </p>
+                  <p>
+                    Price: {{oneMission.priceHour}}
+                  </p>
+                </li>
+            </div>
+          </ul>
+        </div>
+
       </div>
 
 
@@ -72,4 +91,4 @@
       </div>
     </div>
 
-  </div>
+  <!-- </div> -->

@@ -17,20 +17,29 @@ export class MissionsService {
     private myRouterServ: Router,
   ) { }
 
-  // getMissions() {
-  //   return this.myHttpServ
-  //   .get(
-  //     `${backendUrl}/api/missions`,
-  //     { withCredentials: true }
-  //   )
-  //   .toPromise();
-  // }
+  getMissions() {
+    return this.myHttpServ
+    .get(
+      `${backendUrl}/api/missions`,
+      { withCredentials: true }
+    )
+    .toPromise();
+  }
 
   postMission(missionInfo: MissionCreated) {
     return this.myHttpServ
     .post(
       `${backendUrl}/api/process-missions`,
       missionInfo,
+      { withCredentials: true }
+    )
+    .toPromise();
+  }
+
+  getWorkerMission(workerId) {
+    return this.myHttpServ
+    .get(
+      `${backendUrl}/api/missions/${workerId}`,
       { withCredentials: true }
     )
     .toPromise();

@@ -1,5 +1,7 @@
 header{
-    height: 30px;
+    margin: 0px;
+    height: 10vh;
+    /* border: 1px solid red */
 }
 
 .navbar-home{
@@ -7,21 +9,32 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: #78CCB8;
+    overflow: hidden;
 }
 
-button:hover {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
+.navbar-home a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
 
-nav {
+.navbar-home a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+.nav {
     /* display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: rgb(255, 255, 255); */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 0;
 }
 
