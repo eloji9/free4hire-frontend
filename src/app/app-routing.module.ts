@@ -13,6 +13,7 @@ import { SearchMissionComponent } from './search-mission/search-mission.componen
 import { SearchMissionResultComponent } from './search-mission-result/search-mission-result.component';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
 import { ListMissionsComponent } from './list-missions/list-missions.component';
+import { InvoicesComponent } from './invoices/invoices.component';
 
 
 const routes: Routes = [
@@ -62,6 +63,11 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent,
+    canActivate: [VerifAuthenGuard],
+  },
+  {
+    path: 'invoices',
+    component: InvoicesComponent,
     canActivate: [VerifAuthenGuard],
   },
   {path: '**', component: NotFoundPageComponent},

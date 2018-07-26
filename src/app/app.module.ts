@@ -19,6 +19,7 @@ import { SearchMissionComponent } from './search-mission/search-mission.componen
 import { SearchMissionResultComponent } from './search-mission-result/search-mission-result.component';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
 import { ListMissionsComponent } from './list-missions/list-missions.component';
+import { InvoicesComponent } from './invoices/invoices.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ListMissionsComponent } from './list-missions/list-missions.component';
     SearchMissionResultComponent,
     UserProfilePageComponent,
     ListMissionsComponent,
+    InvoicesComponent,
   ],
   imports: [
     BrowserModule,
