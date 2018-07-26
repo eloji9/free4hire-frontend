@@ -1,33 +1,29 @@
-<header>
-    <!-- <h1>
-        {{title}}
-      </h1> -->
-  <nav class="nav">
-    <div class="navbar-home" *ngIf="myAuthServ.currentUser">
-        <img class="logo-nav" src="../assets/Logo/Free4Hire Logo.png" alt="Logo Free4Hire">
-        <a routerLink="/">Home Page</a>
-        <b>Welcome, {{myAuthServ.currentUser.firstName}} {{myAuthServ.currentUser.lastName}}</b>
-        <a routerLink="/platform">Your platform</a>
-        <a routerLink="/settings">Settings</a>
-        <a *ngIf="!myAuthServ.currentUser.role" routerLink="/process-missions">Create Mission</a>
-        <a *ngIf="myAuthServ.currentUser.role" routerLink="/search-mission">Search</a>
-        <a *ngIf="myAuthServ.currentUser.role" routerLink="/list-missions">All The Missions</a>
-        <a routerLink="/invoices">Invoices</a>
-        <button (click)='logoutClick()'>Log Out</button>
-    </div>
-    <div class="navbar-home " *ngIf="!myAuthServ.currentUser">
-        <img class="logo-nav" src="../assets/Logo/Free4Hire Logo.png" alt="Logo Free4Hire">
-        <a routerLink="/">Home Page</a>
-        <a routerLink="/signup">Sign Up</a>
-        <a routerLink="/login">Log In</a>
-    </div>
-  </nav>
-</header>
+ <div class="whole-thing">
+        <div class="navbar is-dark">
+                <div class="navbar-brand">
+                    <a routerLink="/" class="navbar-item">
+                        <img class="logo-nav" src="../assets/Logo/Free4Hire Logo.png" alt="Logo Free4Hire">
+                    </a>
+                </div>
 
-<router-outlet></router-outlet>
+                <div class="navbar-menu navbar-end" *ngIf="!myAuthServ.currentUser">
+                    <a class="navbar-item" routerLink="/signup">Sign Up</a>
+                    <a class="navbar-item" routerLink="/login">Login</a>
+                </div>
 
-<footer>
-    <p>
-      Made with Love and Tenderness 🐪 !
-    </p>
-  </footer>
+                <div class="navbar-menu navbar-end" *ngIf="myAuthServ.currentUser">
+                    <p class="navbar-item">Welcome, {{myAuthServ.currentUser.firstName}} {{myAuthServ.currentUser.lastName}}</p>
+                    <a class="navbar-item" routerLink="/platform">Your platform</a>
+                    <a *ngIf="!myAuthServ.currentUser.role" class="navbar-item" routerLink="/process-missions" >Create Mission</a>
+                    <a *ngIf="myAuthServ.currentUser.role" class="navbar-item" routerLink="/search-mission">Search</a>
+                    <a *ngIf="myAuthServ.currentUser.role" class="navbar-item" routerLink="/list-missions">All The Missions</a>
+                    <a class="navbar-item" routerLink="/invoices">Invoices</a>
+                    <a class="navbar-item" routerLink="/settings">Settings</a>
+                    <button (click)='logoutClick()' >Log Out</button>
+                </div>
+            </div>
+
+            <router-outlet></router-outlet>
+
+        <app-footer></app-footer>
+ </div>

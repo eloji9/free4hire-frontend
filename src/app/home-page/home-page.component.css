@@ -1,8 +1,39 @@
-.top-section{
+section {
+    height: 100vh
+}
+
+.container::after {
+    content: "";
+    background:
+    linear-gradient(
+        rgba(120, 204, 184, 0.2),
+        rgba(120, 204, 184, 0.2)
+    ), url(../../assets/HomePage/background-images/animal-cat-cute-46024.jpg);
+    background-repeat: none;
+    background-size: cover;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+.img-client{
+    height: 25vh;
+}
+
+.img-team{
+    height: 40vh;
+}
+
+
+/* .section .top-section{
     height: 100vh;
 }
 
-.top-section::after {
+.section .top-section::after {
     content: "";
     background:
     linear-gradient(
@@ -47,7 +78,7 @@
     border: 1px solid black
 }
 
-/* .client-section::after{
+.client-section::after{
     background:
     linear-gradient(
         rgba(#E4572E, 0.5),
@@ -59,7 +90,7 @@
     right: 0;
     position: absolute;
     z-index: -1;
-  } */
+  }
 
 .big-box .worker-section{
     height: 100vh;
@@ -70,8 +101,18 @@ h1{
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 .text p{
     text-align: center;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #about h2{
@@ -96,7 +137,7 @@ h1{
 }
 
 .box-client{
-    /* border: 1px solid black; */
+    border: 1px solid black;
     width: 35vw;
     margin: 0 5vw;
     display: flex;
@@ -135,4 +176,4 @@ li{
 
 #contact input{
     width: 336px;
-}
+} */

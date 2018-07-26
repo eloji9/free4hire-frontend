@@ -4,6 +4,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RatingModule } from 'ngx-rating';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +24,7 @@ import { SearchMissionResultComponent } from './search-mission-result/search-mis
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
 import { ListMissionsComponent } from './list-missions/list-missions.component';
 import { InvoicesComponent } from './invoices/invoices.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -38,6 +43,7 @@ import { InvoicesComponent } from './invoices/invoices.component';
     UserProfilePageComponent,
     ListMissionsComponent,
     InvoicesComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +53,7 @@ import { InvoicesComponent } from './invoices/invoices.component';
     ReactiveFormsModule,
     RatingModule,
     NgbModule.forRoot(),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
