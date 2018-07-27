@@ -1,77 +1,79 @@
-<div class="signup-page">
-    <h2>Sign Up !</h2>
+<section class="section">
+  <div class="signup-page">
+      <h1 class="title">Sign Up !</h1>
 
-    <form class="signup-form" [formGroup]="rForm" (ngSubmit)="signupSubmit()">
-      <label class="signup-label" for="firstName">
-        Your First Name :
-      </label>
-      <input class="signup-input" [(ngModel)]="signupForm.firstName" formControlName="firstName" name="firstName" id="firstName" type="text" placeholder="First Name">
-      <div *ngIf="rForm.controls['firstName'].touched && !rForm.controls[ 'firstName'].valid">What's your First Name ?</div>
-
-      <label class="signup-label" for="lastName">
-        Your Last Name :
-      </label>
-      <input class="signup-input" [(ngModel)]="signupForm.lastName" formControlName="lastName" name="lastName" id="lastName" type="text" placeholder="Last Name">
-      <div *ngIf="rForm.controls['lastName'].touched && !rForm.controls[ 'lastName'].valid">What's your Lirst Name ?</div>
-
-      <br/>
-      <label class="signup-label" for="email">
-        Your Email :
-      </label>
-      <input class="signup-input" [(ngModel)]="signupForm.email" formControlName="email" name="email" id="email" type="email" placeholder="email@example.com">
-      <div *ngIf="rForm.controls['email'].touched && !rForm.controls['email'].valid">Your email will allow you to log in next time !</div>
-      <div *ngIf="rForm.controls['email'].dirty && rForm.controls['email'].hasError('email')">Your email is not valid</div>
-
-      <!-- <input [(ngModel)]="signupForm.image" formControlName="image" name="image" id="image" type="file">
-      <div *ngIf="rForm.controls['image'].touched && !rForm.controls['image'].valid">Allow the other users to see your beautiful face !</div>
-      <div *ngIf="rForm.controls['image'].dirty && rForm.controls['image'].hasError('image')">There is a problem with your picture</div> -->
-      <br/>
-      <label class="signup-label" for="phone">
-        Your Phone Number :
-      </label>
-      <input class="signup-input" [(ngModel)]="signupForm.phone" formControlName="phone" name="email" id="phone" type="phone" placeholder="xx.xx.xx.xx.xx">
-      <div *ngIf="rForm.controls['phone'].touched && !rForm.controls['phone'].valid">Your phone number is important to connect you to others !</div>
-      <div *ngIf="rForm.controls['phone'].dirty && rForm.controls['phone'].hasError('phone')">Your phone number is not valid.</div>
-
-      <br/>
-      <label class="signup-label" for="adress">
-        Your adress :
-      </label>
-      <input class="signup-input" [(ngModel)]="signupForm.adress" formControlName="adress" name="adress" id="adress" type="adress" placeholder="500 parkstreet Washington DC USA">
-      <div *ngIf="rForm.controls['adress'].touched && !rForm.controls['adress'].valid">Your adress is important to connect you to others !</div>
-      <div *ngIf="rForm.controls['adress'].dirty && rForm.controls['adress'].hasError('adress')">Your adress is not valid.</div>
-
-      <br/>
-      <label class="signup-label" for="originalPassword">
-        Your Password :
-      </label>
-      <input class="signup-input" [(ngModel)]="signupForm.originalPassword" formControlName="originalPassword" name="originalPassword" id="password"
-        type="password" placeholder="your secret password">
-      <div *ngIf="rForm.controls['originalPassword'].touched && rForm.controls[ 'originalPassword'].hasError('required')">Choose a password.</div>
-      <div *ngIf="rForm.controls['originalPassword'].touched && rForm.controls[ 'originalPassword'].hasError('pattern')">Your password need to be 10 characters long and have at least one number and one capital letter.</div>
-
-
-      <div class="switch-field">
+      <form class="signup-form" [formGroup]="rForm" (ngSubmit)="signupSubmit()">
         <label class="signup-label" for="firstName">
-              Choose Wisely :
+          Your First Name :
         </label>
-          <div class="signup-type">
-            <div>
-              <input [(ngModel)]="signupForm.role" formControlName="role" type="radio" id="switch_left" name="role" value="false"checked/>
+        <input class="signup-input" [(ngModel)]="signupForm.firstName" formControlName="firstName" name="firstName" id="firstName" type="text" placeholder="First Name">
+        <div *ngIf="rForm.controls['firstName'].touched && !rForm.controls[ 'firstName'].valid">What's your First Name ?</div>
 
-              <label for="switch_left">
-                Worker
-              </label>
-            </div>
-            <div>
-              <input [(ngModel)]="signupForm.role" formControlName="role" type="radio" id="switch_right" name="role" value="true"/>
-              <label for="switch_right">
-                Client
-              </label>
-            </div>
-          </div>
-      </div>
+        <label class="signup-label" for="lastName">
+          Your Last Name :
+        </label>
+        <input class="signup-input" [(ngModel)]="signupForm.lastName" formControlName="lastName" name="lastName" id="lastName" type="text" placeholder="Last Name">
+        <div *ngIf="rForm.controls['lastName'].touched && !rForm.controls[ 'lastName'].valid">What's your Lirst Name ?</div>
 
-      <input class="signup-btn" type="submit" value="Submit" [disabled]="!rForm.valid">
-    </form>
-</div>
+        <br/>
+        <label class="signup-label" for="email">
+          Your Email :
+        </label>
+        <input class="signup-input" [(ngModel)]="signupForm.email" formControlName="email" name="email" id="email" type="email" placeholder="email@example.com">
+        <div *ngIf="rForm.controls['email'].touched && !rForm.controls['email'].valid">Your email will allow you to log in next time !</div>
+        <div *ngIf="rForm.controls['email'].dirty && rForm.controls['email'].hasError('email')">Your email is not valid</div>
+
+        <!-- <input [(ngModel)]="signupForm.image" formControlName="image" name="image" id="image" type="file">
+        <div *ngIf="rForm.controls['image'].touched && !rForm.controls['image'].valid">Allow the other users to see your beautiful face !</div>
+        <div *ngIf="rForm.controls['image'].dirty && rForm.controls['image'].hasError('image')">There is a problem with your picture</div> -->
+        <br/>
+        <label class="signup-label" for="phone">
+          Your Phone Number :
+        </label>
+        <input class="signup-input" [(ngModel)]="signupForm.phone" formControlName="phone" name="email" id="phone" type="phone" placeholder="xx.xx.xx.xx.xx">
+        <div *ngIf="rForm.controls['phone'].touched && !rForm.controls['phone'].valid">Your phone number is important to connect you to others !</div>
+        <div *ngIf="rForm.controls['phone'].dirty && rForm.controls['phone'].hasError('phone')">Your phone number is not valid.</div>
+
+        <br/>
+        <label class="signup-label" for="adress">
+          Your adress :
+        </label>
+        <input class="signup-input" [(ngModel)]="signupForm.adress" formControlName="adress" name="adress" id="adress" type="adress" placeholder="500 parkstreet Washington DC USA">
+        <div *ngIf="rForm.controls['adress'].touched && !rForm.controls['adress'].valid">Your adress is important to connect you to others !</div>
+        <div *ngIf="rForm.controls['adress'].dirty && rForm.controls['adress'].hasError('adress')">Your adress is not valid.</div>
+
+        <br/>
+        <label class="signup-label" for="originalPassword">
+          Your Password :
+        </label>
+        <input class="signup-input" [(ngModel)]="signupForm.originalPassword" formControlName="originalPassword" name="originalPassword" id="password"
+          type="password" placeholder="your secret password">
+        <div *ngIf="rForm.controls['originalPassword'].touched && rForm.controls[ 'originalPassword'].hasError('required')">Choose a password.</div>
+        <div *ngIf="rForm.controls['originalPassword'].touched && rForm.controls[ 'originalPassword'].hasError('pattern')">Your password need to be 10 characters long and have at least one number and one capital letter.</div>
+
+
+        <div class="switch-field">
+          <label class="signup-label" for="firstName">
+                Choose Wisely :
+          </label>
+            <div class="signup-type">
+              <div>
+                <input [(ngModel)]="signupForm.role" formControlName="role" type="radio" id="switch_left" name="role" value="false"checked/>
+
+                <label for="switch_left">
+                  Worker
+                </label>
+              </div>
+              <div>
+                <input [(ngModel)]="signupForm.role" formControlName="role" type="radio" id="switch_right" name="role" value="true"/>
+                <label for="switch_right">
+                  Client
+                </label>
+              </div>
+            </div>
+        </div>
+
+        <input class="signup-btn" type="submit" value="Submit" [disabled]="!rForm.valid">
+      </form>
+  </div>
+</section>
