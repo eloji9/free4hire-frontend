@@ -31,6 +31,7 @@
     color: #fff;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -55,4 +56,24 @@
     left: 0;
     bottom: 0;
     right: 0;
+}
+
+.container ul{
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    width: 70vw;
+}
+
+.container .each-mission{
+    width: 30vw;
+    height: 40vh;
+    border: 2px solid white;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }

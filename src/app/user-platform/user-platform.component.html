@@ -27,33 +27,33 @@
       </span>
     </div>
 
-    <div>
+    <div class="container">
       <ul>
-        <div>
           <li *ngFor="let oneMission of missionData">
-            <h3>
-              {{oneMission.type}}
-            </h3>
-            <p>
-              Adress: {{oneMission.adress}}
-            </p>
-            <p *ngIf="oneMission.client">
-              For: {{oneMission.client}}
-            </p>
-            <p>
-              Done by: {{oneMission.worker.firstName}} {{oneMission.worker.lastName}}
-            </p>
-            <p>
-              From: {{oneMission.startDateTime}}
-            </p>
-            <p>
-              To: {{oneMission.endDateTime}}
-            </p>
-            <p>
-              Price: {{oneMission.priceHour}}
-            </p>
+            <div class="each-mission">
+                <h3>
+                    {{oneMission.type}}
+                  </h3>
+                  <p>
+                    Adress: {{oneMission.adress}}
+                  </p>
+                  <p *ngIf="oneMission.client">
+                    For: {{oneMission.client}}
+                  </p>
+                  <p>
+                    Done by: {{oneMission.worker.firstName}} {{oneMission.worker.lastName}}
+                  </p>
+                  <p>
+                    From: {{oneMission.startDateTime}}
+                  </p>
+                  <p>
+                    To: {{oneMission.endDateTime}}
+                  </p>
+                  <p>
+                    Price: {{oneMission.priceHour}}
+                  </p>
+            </div>
           </li>
-        </div>
       </ul>
     </div>
 </section>

@@ -345,3 +345,8 @@ form{
 #contact input{
     width: 336px;
 }
+
+.last-section .container textarea,
+.last-section .container input{
+    margin-top: 10px;
+}
