@@ -1,22 +1,26 @@
 /* General Styling */
-.section {
+/* .section {
     height: 100vh;
     margin: 0;
     width: 100vw;
-}
-/*
-.title{
-    color: white
-}
+} */
 
+.title,
 .subtitle{
     color: white;
-} */
+    text-align: center;
+}
+
+.subtitle strong,
+.about-element strong {
+    color: white;
+}
 
 /* TOP SECTION : TITLE */
 .top-section{
-    height: 100vh;
-    background: #000 url('../../assets/HomePage/background-images/adult-cleaning-flora-713297.jpg');
+    min-height: 100vh;
+    /* background: rgba(#FFF, 0.5) url('../../assets/HomePage/background-images/adult-cleaning-flora-713297.jpg'); */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/adult-cleaning-flora-713297.jpg');
     -webkit-background-size: cover;
     background-size: cover;
     color: #fff;
@@ -30,7 +34,7 @@
     bottom: 0;
     right: 0;
     /* border: 1px solid black; */
-    /* opacity: 0.5; */
+    /* opacity: 0.2; */
 }
 
 .color-overlay-top {
@@ -48,7 +52,7 @@
 /* SECOND SECTION : ABOUT THE APP*/
 .second-section{
     height: 100vh;
-    background: #000 url('../../assets/HomePage/background-images/animal-cat-cute-46024.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/animal-cat-cute-46024.jpg');
     -webkit-background-size: cover;
     background-size: cover;
     color: #fff;
@@ -78,13 +82,21 @@
   }
 
 .second-section .about-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50vw;
+}
+
+.about-element a{
+
+    color: white;
 }
 
 /* THIRD SECTION : LOOKING FOR A WORKER*/
 .third-section{
     border: 1px solid black;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #D0E8F0;
     color: #000;
     width: 100%;
@@ -97,14 +109,15 @@
     left: 0;
     bottom: 0;
     right: 0;
+    padding: 20px 0;
     /* background: #000 url('../../assets/HomePage/background-images/animal-cat-cute-46024.jpg'); */
     /* -webkit-background-size: cover; */
     /* background-size: cover; */
 }
 
 .color-overlay-third {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     background: #F0D1D0;
     opacity: .3;
     position: absolute;
@@ -117,7 +130,7 @@
 /* FOURTH SECTION : WANTING TO BE A WORKER*/
 .fourth-section{
     border: 1px solid black;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #D0E8F0;
     color: #000;
     width: 100%;
@@ -130,6 +143,7 @@
     left: 0;
     bottom: 0;
     right: 0;
+    padding: 20px 0;
     /* background: #000 url('../../assets/HomePage/background-images/animal-cat-cute-46024.jpg'); */
     /* -webkit-background-size: cover; */
     /* background-size: cover; */
@@ -138,7 +152,7 @@
 /* FIFTH SECTION : THE TEAM*/
 .fifth-section{
     border: 1px solid black;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #D0E8F0;
     color: #000;
     width: 100%;
@@ -159,7 +173,7 @@
 /* LAST SECTION : CONTACT*/
 .last-section{
     border: 1px solid black;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #D0E8F0;
     color: #000;
     width: 100%;
