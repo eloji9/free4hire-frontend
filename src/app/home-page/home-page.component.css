@@ -1,9 +1,4 @@
 /* General Styling */
-/* .section {
-    height: 100vh;
-    margin: 0;
-    width: 100vw;
-} */
 
 .title,
 .subtitle{
@@ -19,7 +14,6 @@
 /* TOP SECTION : TITLE */
 .top-section{
     min-height: 100vh;
-    /* background: rgba(#FFF, 0.5) url('../../assets/HomePage/background-images/adult-cleaning-flora-713297.jpg'); */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/adult-cleaning-flora-713297.jpg');
     -webkit-background-size: cover;
     background-size: cover;
@@ -33,8 +27,6 @@
     left: 0;
     bottom: 0;
     right: 0;
-    /* border: 1px solid black; */
-    /* opacity: 0.2; */
 }
 
 .color-overlay-top {
@@ -66,7 +58,6 @@
     left: 0;
     bottom: 0;
     right: 0;
-    /* border: 1px solid black; */
 }
 
 .color-overlay-second {
@@ -100,9 +91,7 @@
 
 /* THIRD SECTION : LOOKING FOR A WORKER*/
 .third-section{
-    /* border: 1px solid black; */
     min-height: 100vh;
-    /* background-color: #D0E8F0; */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/adult-affection-baby-853408.jpg');
     -webkit-background-size: cover;
     background-size: cover;
@@ -118,9 +107,6 @@
     bottom: 0;
     right: 0;
     padding: 20px 0;
-    /* background: #000 url('../../assets/HomePage/background-images/animal-cat-cute-46024.jpg'); */
-    /* -webkit-background-size: cover; */
-    /* background-size: cover; */
 }
 
 .color-overlay-third {
@@ -135,11 +121,38 @@
     right: 0;
   }
 
+.fourth-section .container,
+.third-section .container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.fourth-section .container h1,
+.third-section .container h1{
+    text-align: center;
+}
+
+.boxes-client{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.box-client{
+    width: 30vw;
+    height: 40vh;
+    border: 1px solid black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 /* FOURTH SECTION : WANTING TO BE A WORKER*/
 .fourth-section{
     border: 1px solid black;
     min-height: 100vh;
-    /* background-color: #D0E8F0; */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/adult-catering-chair-6270.jpg');
     -webkit-background-size: cover;
     background-size: cover;
@@ -155,9 +168,6 @@
     bottom: 0;
     right: 0;
     padding: 20px 0;
-    /* background: #000 url('../../assets/HomePage/background-images/animal-cat-cute-46024.jpg'); */
-    /* -webkit-background-size: cover; */
-    /* background-size: cover; */
 }
 
 .color-overlay-fourth {
@@ -179,7 +189,6 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/dawn-desert-dry-273935.jpg');
     -webkit-background-size: cover;
     background-size: cover;
-    /* background-color: #D0E8F0; */
     color: #000;
     width: 100%;
     display: flex;
@@ -191,9 +200,6 @@
     left: 0;
     bottom: 0;
     right: 0;
-    /* background: #000 url('../../assets/HomePage/background-images/animal-cat-cute-46024.jpg'); */
-    /* -webkit-background-size: cover; */
-    /* background-size: cover; */
 }
 
 .color-overlay-fifth {
@@ -215,7 +221,6 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/adults-apron-business-580613.jpg');
     -webkit-background-size: cover;
     background-size: cover;
-    /* background-color: #D0E8F0; */
     color: #000;
     width: 100%;
     display: flex;
@@ -227,9 +232,6 @@
     left: 0;
     bottom: 0;
     right: 0;
-    /* background: #000 url('../../assets/HomePage/background-images/animal-cat-cute-46024.jpg'); */
-    /* -webkit-background-size: cover; */
-    /* background-size: cover; */
 }
 
 .color-overlay-last {
@@ -243,36 +245,8 @@
     bottom: 0;
     right: 0;
   }
-/* h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 60px;
-    z-index: 1;
-  } */
 
-.third-section .container .boxes-client{
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.third-section .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.third-section .container .boxes-client .box-client{
-    border: 1px solid black;
-    width: 35vw;
-    margin: 0 5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.third-section .container .boxes-client .box-client p {
-    text-align: justify;
-    padding: 0 10vw;
-}
 
 .img-client{
     height: 25vh;
