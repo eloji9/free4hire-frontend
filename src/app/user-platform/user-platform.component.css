@@ -1,3 +1,58 @@
-.dash{
-    margin: 10vh 0 0 0;
+/* General Styling */
+.title,
+.subtitle{
+    color: white;
+    text-align: center;
+}
+
+/* TOP SECTION : TITLE */
+.user-section{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/clean-cleaning-mop-48889.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.missions-section{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/clean-cleaning-mop-48889.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.comments-section{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/clean-cleaning-mop-48889.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }

@@ -2,93 +2,84 @@
 <!-- <img src="../assets/images/logo.png" alt="logoFree4Hire"> -->
 
 
-<div class="allOfIt">
-    <div class="user-info">
-      <h1>Hi again, {{userInfo?.firstName}} {{userInfo?.lastName}}!</h1>
+<section class="section user-section">
+  <div class="user-info">
+    <h1 class="title">Hi again, {{userInfo?.firstName}} {{userInfo?.lastName}}!</h1>
 
-      <!-- <span>
-        <h3>Profil</h3>
-        <a routerLink="/settings">Edit</a>
-      </span> -->
-      <div class="user-infos">
-        <ul>
-          <li>Adress: {{userInfo?.adress}}</li>
-          <li>Phone: {{userInfo?.phone}}</li>
-          <li>Email: {{userInfo?.email}}</li>
-        </ul>
-      </div>
+    <!-- <span>
+      <h3>Profil</h3>
+      <a routerLink="/settings">Edit</a>
+    </span> -->
+    <div class="subtitle user-infos">
+      <ul>
+        <li>Adress: {{userInfo?.adress}}</li>
+        <li>Phone: {{userInfo?.phone}}</li>
+        <li>Email: {{userInfo?.email}}</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-
-      <div *ngIf="userInfo?.missions.length > 0" class="user-missions">
-        <span>
-          <h3><i>My missions</i></h3>
-        </span>
-        <!-- <div*ngIf="userInfo?.missions.length = 0" class="user-no-missions">
-          <p>
-            You have no missions yet.
-          </p>
-          <p *ngIf="!myAuthServ.currentUser.role">
-            Create a new one and make yourself available.
-          </p>
-          <p *ngIf="myAuthServ.currentUser.role">
-              Check all the available missions and search for your need.
-            </p> -->
-        </div>
-
-        <div>
-          <ul>
-            <div>
-                <li *ngFor="let oneMission of missionData">
-                  <h3>
-                    {{oneMission.type}}
-                  </h3>
-                  <p>
-                    Adress: {{oneMission.adress}}
-                  </p>
-                  <p *ngIf="oneMission.client">
-                    For: {{oneMission.client}}
-                  </p>
-                  <p>
-                    Done by: {{oneMission.worker.firstName}} {{oneMission.worker.lastName}}
-                  </p>
-                  <p>
-                    From: {{oneMission.startDateTime}}
-                  </p>
-                  <p>
-                    To: {{oneMission.endDateTime}}
-                  </p>
-                  <p>
-                    Price: {{oneMission.priceHour}}
-                  </p>
-                </li>
-            </div>
-          </ul>
-        </div>
-
-      </div>
-
-
-      <div *ngIf="userInfo?.comments.length > 0" class="user-missions">
-        <span>
-          <h3><i>Comments</i></h3>
-        </span>
-        <ul>
-          <li *ngFor="let oneComment of userInfo?.comments">
-            <h3>
-              {{oneComment.title}}
-            </h3>
-            <p>
-              by : {{oneComment.creator}}
-            </p>
-            <p>
-              rating : {{oneComment.rating}}
-            </p>
-            <p>
-              {{oneComment.description}}
-            </p>
-          </li>
-        </ul>
-      </div>
+<section class="section missions-section">
+  <div *ngIf="userInfo?.missions.length > 0" class="user-missions">
+      <span>
+        <h1 class="title"><i>My missions</i></h1>
+      </span>
     </div>
 
-  <!-- </div> -->
+    <div>
+      <ul>
+        <div>
+          <li *ngFor="let oneMission of missionData">
+            <h3>
+              {{oneMission.type}}
+            </h3>
+            <p>
+              Adress: {{oneMission.adress}}
+            </p>
+            <p *ngIf="oneMission.client">
+              For: {{oneMission.client}}
+            </p>
+            <p>
+              Done by: {{oneMission.worker.firstName}} {{oneMission.worker.lastName}}
+            </p>
+            <p>
+              From: {{oneMission.startDateTime}}
+            </p>
+            <p>
+              To: {{oneMission.endDateTime}}
+            </p>
+            <p>
+              Price: {{oneMission.priceHour}}
+            </p>
+          </li>
+        </div>
+      </ul>
+    </div>
+</section>
+
+
+<section class="section comments-section">
+  <div *ngIf="userInfo?.comments.length > 0" class="user-missions">
+    <span>
+      <h1 class="title"><i>Comments</i></h1>
+    </span>
+    <ul>
+      <li *ngFor="let oneComment of userInfo?.comments">
+        <h3>
+          {{oneComment.title}}
+        </h3>
+        <p>
+          by : {{oneComment.creator}}
+        </p>
+        <p>
+          rating : {{oneComment.rating}}
+        </p>
+        <p>
+          {{oneComment.description}}
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+

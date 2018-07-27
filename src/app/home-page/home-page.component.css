@@ -6,6 +6,11 @@
     text-align: center;
 }
 
+.top-section .title {
+    margin-bottom: 150px;
+}
+
+
 .subtitle strong,
 .about-element strong {
     color: white;
@@ -130,6 +135,8 @@
 }
 .fourth-section .container h1,
 .third-section .container h1{
+    padding: 20px;
+    text-decoration-line: underline;
     text-align: center;
 }
 
@@ -142,16 +149,26 @@
 .box-client{
     width: 30vw;
     height: 40vh;
-    border: 1px solid black;
+    border: 2px solid white;
     margin: 0;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.box-client p{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: justify;
+    margin-top: 20px;
 }
 
 /* FOURTH SECTION : WANTING TO BE A WORKER*/
 .fourth-section{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/adult-catering-chair-6270.jpg');
     -webkit-background-size: cover;
@@ -184,7 +201,6 @@
 
 /* FIFTH SECTION : THE TEAM*/
 .fifth-section{
-    border: 1px solid black;
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/dawn-desert-dry-273935.jpg');
     -webkit-background-size: cover;
@@ -214,9 +230,43 @@
     right: 0;
   }
 
+.fifth-section .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.fifth-section .container h1,
+.fifth-section .container h2{
+    padding: 20px;
+    /* text-decoration-line: underline; */
+    text-align: center;
+}
+
+.fifth-section .container .team-presentation .team-element h3{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+li{
+    color: white;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.team-presentation{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+
 /* LAST SECTION : CONTACT*/
 .last-section{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/HomePage/background-images/adults-apron-business-580613.jpg');
     -webkit-background-size: cover;
@@ -254,8 +304,22 @@
 
 .img-team{
     height: 40vh;
+    border: 4px solid white;
+    border-radius: 50%
 }
 
+.last-section .container{
+    padding: 20px;
+    text-align: center;
+}
+
+form{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    margin-bottom: 50px; */
+}
 
 #team{
     text-align: center;
@@ -271,9 +335,6 @@
     justify-content: space-around;
 }
 
-li{
-    list-style-type: none;
-}
 
 #contact{
     display: flex;
