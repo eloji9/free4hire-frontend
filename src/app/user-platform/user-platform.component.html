@@ -22,7 +22,7 @@
       </span>
 
     <div class="container">
-      <div class="no-mission" *ngIf="!userInfo?.missions.length > 0">
+      <div class="no-mission" *ngIf="!userInfo?.missions.length">
         <p>
           You don't have any mission yet.
         </p>
@@ -66,7 +66,7 @@
     <span>
       <h1 class="title"><i>Comments</i></h1>
     </span>
-    <div class="no-mission" *ngIf="!userInfo?.comments.length > 0">
+    <div class="no-mission" *ngIf="!userInfo?.comments.length">
       <p>
         You don't have any comments yet.
       </p>
