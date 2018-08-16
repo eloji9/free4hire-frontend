@@ -30,6 +30,7 @@
     background-size: cover;
     color: #fff;
     width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,6 +49,7 @@
     background-size: cover;
     color: #fff;
     width: 100%;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,4 +78,17 @@
     justify-content: space-around;
     padding: 20px;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.container .no-mission{
+    display: flex;
+}
+
+.section .missions-section .user-missionsp{
+    text-align: center;
+}
+
+.user-section .user-info a{
+    color: white;
+    text-align: center;
 }

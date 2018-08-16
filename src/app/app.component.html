@@ -12,12 +12,15 @@
                 </div>
 
                 <div class="navbar-menu navbar-end" *ngIf="myAuthServ.currentUser">
-                    <p class="navbar-item">Welcome, {{myAuthServ.currentUser.firstName}} {{myAuthServ.currentUser.lastName}}</p>
-                    <a class="navbar-item" routerLink="/platform">Your platform</a>
+                    <a class="navbar-item" routerLink="/platform">{{myAuthServ.currentUser.firstName}} {{myAuthServ.currentUser.lastName}} Platform</a>
                     <a *ngIf="!myAuthServ.currentUser.role" class="navbar-item" routerLink="/process-missions" >Create Mission</a>
+                    <!-- To be able to look for availabilities -->
                     <a *ngIf="myAuthServ.currentUser.role" class="navbar-item" routerLink="/search-mission">Search</a>
+                    <!-- This is a temporary feature to access all the missions -->
                     <a *ngIf="myAuthServ.currentUser.role" class="navbar-item" routerLink="/list-missions">All The Missions</a>
+                    <!-- This feature is to be able to bill the client and the workere (business model of the platform) -->
                     <a class="navbar-item" routerLink="/invoices">Invoices</a>
+                    <!-- Possibility to edit the profile -->
                     <a class="navbar-item" routerLink="/settings">Settings</a>
                     <button (click)='logoutClick()' >Log Out</button>
                 </div>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { SimpleWebDriverClient } from 'blocking-proxy/built/lib/simple_webdriver_client';
+// import { SimpleWebDriverClient } from 'blocking-proxy/built/lib/simple_webdriver_client';
 
 import { environment } from '../../environments/environment';
 const { backendUrl } = environment;
@@ -99,7 +99,6 @@ export class User {
   createdAt: string;
   updatedAt: string;
   role: boolean;
-  // image: string;
   adress: string;
   phone: string;
   missions: Array<Mission>;
@@ -116,18 +115,24 @@ export class SignupSubmission {
   lastName: string;
   email: string;
   role: boolean;
-  // image: string;
   adress: string;
   phone: string;
   originalPassword: string;
+  // I would rather the signup be a simple (namen, email and password)
+  // and after the signup, get the user to fill the rest of the form.
+  // Elements I would like to add later on.
+  // image: string;
 }
 
+// This part is for later, when I'll add the googlemaps API
 // export class Adress {
 //   string: String;
 //   lat: number;
 //   long: number;
 // }
 
+
+// The next two elements have been left for later but are probably going to be deleted to be moved.
 export class Mission {
   // type: string;
   // adress: string;

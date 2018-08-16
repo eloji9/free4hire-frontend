@@ -1,15 +1,7 @@
 
-<!-- <img src="../assets/images/logo.png" alt="logoFree4Hire"> -->
-
-
 <section class="section user-section">
   <div class="user-info">
-    <h1 class="title">Hi again, {{userInfo?.firstName}} {{userInfo?.lastName}}!</h1>
-
-    <!-- <span>
-      <h3>Profil</h3>
-      <a routerLink="/settings">Edit</a>
-    </span> -->
+    <h1 class="title">Welcome, {{userInfo?.firstName}} {{userInfo?.lastName}}!</h1>
     <div class="subtitle user-infos">
       <ul>
         <li>Adress: {{userInfo?.adress}}</li>
@@ -17,69 +9,87 @@
         <li>Email: {{userInfo?.email}}</li>
       </ul>
     </div>
+    <div>
+        <a href="/settings">Edit your profile</a>
+    </div>
   </div>
 </section>
 
 <section class="section missions-section">
-  <div *ngIf="userInfo?.missions.length > 0" class="user-missions">
+  <div class="user-missions">
       <span>
         <h1 class="title"><i>My missions</i></h1>
       </span>
-    </div>
 
     <div class="container">
-      <ul>
-          <li *ngFor="let oneMission of missionData">
-            <div class="each-mission">
-                <h3>
-                    {{oneMission.type}}
-                  </h3>
-                  <p>
-                    Adress: {{oneMission.adress}}
-                  </p>
-                  <p *ngIf="oneMission.client">
-                    For: {{oneMission.client}}
-                  </p>
-                  <p>
-                    Done by: {{oneMission.worker.firstName}} {{oneMission.worker.lastName}}
-                  </p>
-                  <p>
-                    From: {{oneMission.startDateTime}}
-                  </p>
-                  <p>
-                    To: {{oneMission.endDateTime}}
-                  </p>
-                  <p>
-                    Price: {{oneMission.priceHour}}
-                  </p>
-            </div>
-          </li>
-      </ul>
+      <div class="no-mission" *ngIf="!userInfo?.missions.length > 0">
+        <p>
+          You don't have any mission yet.
+        </p>
+      </div>
+      <div *ngIf="userInfo?.missions.length > 0">
+          <ul>
+              <li *ngFor="let oneMission of missionData">
+                <div class="each-mission">
+                    <h3>
+                        {{oneMission.type}}
+                      </h3>
+                      <p>
+                        Adress: {{oneMission.adress}}
+                      </p>
+                      <p *ngIf="oneMission.client">
+                        For: {{oneMission.client}}
+                      </p>
+                      <p>
+                        Done by: {{oneMission.worker.firstName}} {{oneMission.worker.lastName}}
+                      </p>
+                      <p>
+                        From: {{oneMission.startDateTime}}
+                      </p>
+                      <p>
+                        To: {{oneMission.endDateTime}}
+                      </p>
+                      <p>
+                        Price: {{oneMission.priceHour}}
+                      </p>
+                </div>
+              </li>
+          </ul>
+      </div>
+    </div>
     </div>
 </section>
 
 
 <section class="section comments-section">
-  <div *ngIf="userInfo?.comments.length > 0" class="user-missions">
+  <div class="user-missions">
     <span>
       <h1 class="title"><i>Comments</i></h1>
     </span>
-    <ul>
-      <li *ngFor="let oneComment of userInfo?.comments">
-        <h3>
-          {{oneComment.title}}
-        </h3>
-        <p>
-          by : {{oneComment.creator}}
-        </p>
-        <p>
-          rating : {{oneComment.rating}}
-        </p>
-        <p>
-          {{oneComment.description}}
-        </p>
-      </li>
-    </ul>
+    <div class="no-mission" *ngIf="!userInfo?.comments.length > 0">
+      <p>
+        You don't have any comments yet.
+      </p>
+    </div>
+    <div *ngIf="userInfo?.comments.length > 0">
+      <ul>
+        <li *ngFor="let oneComment of userInfo?.comments">
+          <h3>
+            {{oneComment.title}}
+          </h3>
+          <p>
+            by : {{oneComment.creator}}
+          </p>
+          <p>
+            rating : {{oneComment.rating}}
+          </p>
+          <p>
+            {{oneComment.description}}
+          </p>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </section>
 

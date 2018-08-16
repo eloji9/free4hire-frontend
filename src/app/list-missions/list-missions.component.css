@@ -25,15 +25,24 @@
 
 .each-mission{
     width: 30vw;
-    height: 40vh;
+    height: 50vh;
     border: 2px solid white;
     margin: 20px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 20px;
+    padding: 30px;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+a{
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    width: 200px;
+    margin: auto auto 15px auto;
+    display: block;
 }
 
 .title,
